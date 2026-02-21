@@ -122,8 +122,8 @@ export function AddTaskDialog({
             </label>
             <Select
               value={priority}
-              onValueChange={(value: 'high' | 'medium' | 'low') =>
-                setPriority(value)
+              onValueChange={(value) =>
+                setPriority(value as 'high' | 'medium' | 'low')
               }
             >
               <SelectTrigger>
