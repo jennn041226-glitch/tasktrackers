@@ -1,0 +1,7 @@
+[00:00:01.108] Server  LOG     ✓ Ready in 815ms
+[00:00:29.714] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:00:31.109] Server  ERROR   ⨯ Error: export const dynamic = "force-static"/export const revalidate not configured on route "/api/tasks" with "output: export". See more info here: https://nextjs.org/docs/advanced-features/static-html-export
+[00:00:32.687] Server  ERROR   ⨯ Error: export const dynamic = "force-static"/export const revalidate not configured on route "/api/tasks" with "output: export". See more info here: https://nextjs.org/docs/advanced-features/static-html-export
+[00:00:33.681] Server  ERROR   ⨯ Error: export const dynamic = "force-static"/export const revalidate not configured on route "/api/tasks" with "output: export". See more info here: https://nextjs.org/docs/advanced-features/static-html-export
+[00:00:34.148] Server  ERROR   ⨯ Error: export const dynamic = "force-static"/export const revalidate not configured on route "/api/tasks" with "output: export". See more info here: https://nextjs.org/docs/advanced-features/static-html-export
+[00:00:34.601] Server  ERROR   ⨯ Error: export const dynamic = "force-static"/export const revalidate not configured on route "/api/tasks" with "output: export". See more info here: https://nextjs.org/docs/advanced-features/static-html-export

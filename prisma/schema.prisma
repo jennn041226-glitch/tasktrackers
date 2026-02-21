@@ -1,0 +1,45 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model Task {
+  id          String   @id @default(uuid())
+  title       String
+  description String?
+  progress    Int      @default(0)
+  priority    String   @default("medium")
+  tags        String   @default("")
+  order       Int      @default(0)
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+  completedAt DateTime?
+
+  // Self-relation for parent-child
+  parentId    String?
+  parent      Task?    @relation("TaskChildren", fields: [parentId], references: [id], onDelete: Cascade)
+  children    Task[]   @relation("TaskChildren")
+
+  // History records
+  histories   TaskHistory[]
+
+  @@index([parentId])
+  @@index([order])
+}
+
+model TaskHistory {
+  id        String   @id @default(uuid())
+  taskId    String
+  task      Task     @relation(fields: [taskId], references: [id], onDelete: Cascade)
+  action    String
+  oldValue  String?
+  newValue  String?
+  createdAt DateTime @default(now())
+
+  @@index([taskId])
+  @@index([createdAt])
+}
